@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlakéPro — Calculateur placo pour professionnels du BTP</title>
+<style>
+  :root {
+    --bg: #e7e5e4;
+    --card: #f5f4f2;
+    --text: #1e1b4b;
+    --muted: #57534e;
+    --blue: #2662a7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+  .lang-switch { text-align: right; margin-bottom: 20px; }
+  .lang-switch a { color: var(--blue); text-decoration: none; font-weight: bold; margin-left: 12px; }
+  header { text-align: center; margin-bottom: 36px; }
+  .logo-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 64px; height: 64px; border-radius: 16px;
+    background: var(--blue); color: #fff; font-size: 28px; font-weight: bold;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  .tagline { color: var(--muted); font-size: 16px; margin: 0; }
+  .card {
+    background: var(--card); border-radius: 14px; padding: 24px;
+    margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .card h2 { font-size: 17px; margin-top: 0; color: var(--blue); }
+  ul.features { list-style: none; padding: 0; margin: 0; }
+  ul.features li { padding: 8px 0; border-bottom: 1px solid #d6d3d1; }
+  ul.features li:last-child { border-bottom: none; }
+  .stores { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .store-pill {
+    background: #d6d3d1; color: var(--muted); padding: 10px 16px;
+    border-radius: 8px; font-size: 13px; font-weight: bold;
+  }
+  footer { text-align: center; color: #94a3b8; font-size: 13px; margin-top: 36px; }
+  footer a { color: var(--blue); text-decoration: none; }
+  #en { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lang-switch">
+    <a href="#" onclick="show('fr');return false;">Français</a>
+    <a href="#" onclick="show('en');return false;">English</a>
+  </div>
+
+  <div id="fr">
+    <header>
+      <div class="logo-badge">PP</div>
+      <h1>PlakéPro</h1>
+      <p class="tagline">Le calculateur placo pour les professionnels du BTP</p>
+    </header>
+
+    <div class="card">
+      <h2>Ce que fait l'application</h2>
+      <p>PlakéPro calcule en quelques secondes l'entraxe des montants, les quantités de plaques de plâtre et les besoins en isolant pour vos cloisons, doublages et plafonds — selon 4 normes régionales (DTU, ASTM, CSA, DIN). Conçu pour être utilisé directement sur le chantier.</p>
+      <ul class="features">
+        <li>Calculateurs cloison, doublage, plafond et isolation</li>
+        <li>4 normes régionales : DTU, ASTM, CSA, DIN</li>
+        <li>Projets multi-zones avec prix total</li>
+        <li>Génération de devis PDF professionnels</li>
+        <li>Disponible en 25 langues</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Disponibilité</h2>
+      <p>L'application est en cours de soumission sur les stores.</p>
+      <div class="stores">
+        <span class="store-pill">App Store — bientôt disponible</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Informations légales</h2>
+      <p><a href="privacy.html">Politique de confidentialité</a></p>
+      <p>Contact : <a href="mailto:gregportailler@gmail.com">gregportailler@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div id="en">
+    <header>
+      <div class="logo-badge">PP</div>
+      <h1>PlakéPro</h1>
+      <p class="tagline">The drywall calculator for construction professionals</p>
+    </header>
+
+    <div class="card">
+      <h2>What the app does</h2>
+      <p>PlakéPro instantly calculates stud spacing, plasterboard quantities and insulation needs for partitions, linings and ceilings — based on 4 regional codes (DTU, ASTM, CSA, DIN). Built to be used directly on the job site.</p>
+      <ul class="features">
+        <li>Partition, lining, ceiling and insulation calculators</li>
+        <li>4 regional codes: DTU, ASTM, CSA, DIN</li>
+        <li>Multi-zone projects with total pricing</li>
+        <li>Professional PDF quote generation</li>
+        <li>Available in 25 languages</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Availability</h2>
+      <p>The app is currently being submitted to the stores.</p>
+      <div class="stores">
+        <span class="store-pill">App Store — coming soon</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Legal</h2>
+      <p><a href="privacy.html">Privacy Policy</a></p>
+      <p>Contact: <a href="mailto:gregportailler@gmail.com">gregportailler@gmail.com</a></p>
+    </div>
+  </div>
+
+  <footer>PlakéPro — © 2026 Grégory Portailler</footer>
+</div>
+
+<script>
+  function show(lang) {
+    document.getElementById('fr').style.display = lang === 'fr' ? 'block' : 'none';
+    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+  }
+</script>
+
+</body>
+</html>
